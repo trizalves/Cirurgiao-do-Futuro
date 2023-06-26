@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title> Cirurgião: Benefícios </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="logo icon" href="/Cirurgiao-do-Futuro/imagens/principal.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            function changeBackground(color) {
+            document.body.style.background = color;
+        }
+            window.addEventListener("load",function() { changeBackground('white') });
+
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            var nome = document.getElementsByName('nome')[0].value;
+            var email = document.getElementsByName('email')[0].value;
+            var mensagem = document.getElementsByName('mensagem')[0].value;
+
+            // Envie o formulário para o Formspree
+            var form = document.createElement('form');
+            form.setAttribute('action', 'https://formspree.io/seu-email');
+            form.setAttribute('method', 'POST');
+            form.innerHTML = '<input type="email" name="email" value="' + email + '">\
+                            <input type="text" name="nome" value="' + nome + '">\
+                            <textarea name="mensagem">' + mensagem + '</textarea>';
+            document.body.appendChild(form);
+            form.submit();
+        });
+        </script>
+    </body>
+
+    <header>
+        <nav>
+            <ul class="topnav">
+              <li><a class="active" href="cirurgiao-do-futuro.html">Home</a></li>
+              <li><a href="estudos.html"> Estudos de casos </a></li>
+              <li><a href="recursos.html"> Recursos e benefícios </a></li>
+              <li><a href="cirurgiao-do-futuro.html"> Suporte e contato </a></li>
+              <li class="right"><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </body>
+    </header>
+
+    <div class="content">
+        <img src="/Cirurgiao-do-Futuro/Imagens/header.png" alt="central" height="200px" width="600px">
+        <button class="buttonx"> MOBILIDADE </button>
+        <button class="buttonx"> NANORROBÓTICA </button>
+        <button class="buttonx"> (IA) </button>
+        <button class="button1"> </button>
+    </div>
+
+    <div class="container">
+        <img src="/Cirurgiao-do-Futuro/Imagens/tomografia.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Diagnóstico por imagem: Os robôs hospitalares equipados com inteligência 
+            artificial podem analisar imagens médicas, como radiografias, tomografias e ressonâncias 
+            magnéticas, para auxiliar no diagnóstico. A IA pode identificar padrões e características 
+            específicas nas imagens que podem indicar a presença de doenças ou anomalias, fornecendo 
+            assim um diagnóstico mais preciso e rápido. </div>
+        </div>
+      </div>
+
+      <footer id="minxblack">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contato</h3>
+                <p>Email: contatos@cirurgiaofuturo.com</p>
+                <p>Localidade: São Paulo - Jardins, Brasil</p>
+                <p>Telefone: +55 (11) 3945-7654 </p>
+            </div>
+            <div class="description">
+                <p>O cirurgião do futuro é um profissional médico 
+                altamente capacitado e equipado com tecnologias avançadas 
+                que auxiliam e aprimoram suas habilidades durante os procedimentos cirúrgicos.</p>
+            </div>
+            </div>
+                <section class="container">
+                    <h3>Nos deixe uma mensagem aqui:</h3>
+                    <form id="contact-form">
+                    <section class="form-row">
+                        <input type="text" name="nome" placeholder="Nome" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </section>
+                    <section class="form-row">
+                        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+                    </section>
+                    <section class="form-row">
+                        <button type="submit">Enviar</button>
+                    </section>
+                    </form>
+                </section>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Cirurgião do Futuro. Todos os direitos reservados.</p>
+                </div>
+        </footer>
+</html>

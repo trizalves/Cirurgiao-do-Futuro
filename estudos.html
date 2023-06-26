@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+        <head>
+            <title> Cirurgião: Estudos de Casos </title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="logo icon" href="/Cirurgiao-do-Futuro/imagens/principal.png" type="image/x-icon">
+            <link rel="stylesheet" href="style.css">
+        <style>
+        .text{text-align: center;
+            position: relative;
+            float: right;
+            padding-right: 500px;
+            padding-bottom: 20px;
+            padding-top: 80px;
+            font-size: 50px;
+          }
+        .image{ width: 25%;
+            border-radius: 90px;}
+        * {
+            box-sizing: border-box;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        .grit{
+            color: #4592de;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        @media only screen and (min-width: 768px) {
+        /* For desktop: */
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+
+        .justif{ text-align: justify; }
+
+        .photo{width: 100%;
+          }
+        </style>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            function changeBackground(color) {
+            document.body.style.background = color;
+        }
+            window.addEventListener("load",function() { changeBackground('white') });
+
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            var nome = document.getElementsByName('nome')[0].value;
+            var email = document.getElementsByName('email')[0].value;
+            var mensagem = document.getElementsByName('mensagem')[0].value;
+
+            // Envie o formulário para o Formspree
+            var form = document.createElement('form');
+            form.setAttribute('action', 'https://formspree.io/seu-email');
+            form.setAttribute('method', 'POST');
+            form.innerHTML = '<input type="email" name="email" value="' + email + '">\
+                            <input type="text" name="nome" value="' + nome + '">\
+                            <textarea name="mensagem">' + mensagem + '</textarea>';
+            document.body.appendChild(form);
+            form.submit();
+        });
+        </script>
+        
+        <nav>
+        <ul class="topnav">
+            <li><a class="active" href="cirurgiao-do-futuro.html">Home</a></li>
+            <li><a href="estudos.html"> Estudos de casos </a></li>
+            <li><a href="recursos.html"> Recursos e benefícios </a></li>
+            <li><a href="cirurgiao-do-futuro.html"> Suporte e contato </a></li>
+            <li class="right"><a href="#about">About</a></li>
+        </ul>
+        </nav>
+
+        <div class="content">
+            <img src="/Cirurgiao-do-Futuro/Imagens/header.png" alt="central" height="200px" width="600px">
+            <h2> Ênfase na inovação contínua e na pesquisa e desenvolvimento de novas tecnologias.</h2>
+            <p> Com o compromisso de melhorar os resultados clínicos e a experiência dos pacientes, o
+            Cirurgião do Futuro se esforça para fornecer soluções avançadas e confiáveis para hospitais
+            e profissionais de saúde em todo o mundo. Sua dedicação em combinar a expertise médica com a 
+            tecnologia robótica resulta em soluções inovadoras que promovem avanços significativos 
+            na assistência médica.</p>
+        </div>
+
+        <section id="columns">
+            <h1 class="grit">Estudos de Casos</h1>
+                <div class="case">
+                <h3>Caso 1: Cirurgia Assistida por Robô</h3>
+                <p> Um paciente do sexo masculino foi diagnosticado com câncer de próstata e optou por passar por uma cirurgia de prostatectomia, 
+                que é a remoção cirúrgica da próstata. A equipe médica decidiu utilizar um robô cirúrgico para realizar a cirurgia assistida, 
+                aproveitando as vantagens e recursos que a tecnologia oferece.</p>
+                <p>Utilização do robô hospitalar com sucesso na cirurgia: Durante a cirurgia de prostatectomia, o robô cirúrgico foi utilizado com 
+                sucesso para auxiliar o cirurgião em todo o procedimento. O robô é composto por braços mecânicos controlados pelo cirurgião, que 
+                opera a partir de uma estação de controle. Os braços do robô possuem instrumentos cirúrgicos de alta precisão, permitindo que o 
+                cirurgião realize os movimentos necessários com maior precisão e estabilidade do que seria possível apenas com as mãos.</p>
+                <img src="/Cirurgiao-do-Futuro/imagens/robotica.PNG" alt="Caso 1">
+                <b>Benefícios e resultados obtidos:</b>
+                <p>Precisão aprimorada: O uso do robô cirúrgico permitiu uma precisão aprimorada durante a cirurgia. Os braços robóticos são capazes
+                de realizar movimentos mais suaves e precisos, minimizando o risco de danos a estruturas adjacentes à próstata.</p>
+                <p>Visualização em 3D: O robô cirúrgico fornece uma visão tridimensional em alta definição da área de operação. Isso permite ao 
+                cirurgião ter uma visão ampliada e detalhada do campo cirúrgico, facilitando a identificação e a preservação de estruturas importantes.</p>
+                <p>Tempo de recuperação reduzido: Devido à precisão do robô e à natureza minimamente invasiva da cirurgia assistida, muitos pacientes 
+                experimentam um tempo de recuperação mais curto em comparação com cirurgias convencionais. Isso pode resultar em menor tempo de 
+                internação hospitalar e retorno mais rápido às atividades normais.</p>
+                </div>
+        </section>
+
+        <section id="columns">
+            <div class="case">
+                <h3>Caso 2: Atendimento a Pacientes em Isolamento</h3>
+                <p>Durante a pandemia de COVID-19, muitos pacientes foram colocados em isolamento para prevenir a disseminação do vírus. 
+                Essa situação trouxe desafios em termos de apoio e assistência aos pacientes, pois o contato humano direto foi limitado. 
+                Nesse contexto, o uso de robôs hospitalares se mostrou extremamente benéfico para facilitar a interação e fornecer suporte 
+                aos pacientes em isolamento.</p>
+                <p>Em um hospital, um paciente idoso estava isolado em seu quarto devido a um diagnóstico positivo para COVID-19. Como 
+                resultado, ele estava experimentando sentimentos de solidão e ansiedade. A equipe médica decidiu utilizar um robô 
+                hospitalar para auxiliar na interação com o paciente e fornecer suporte emocional e assistência.</p>
+                <img src="/Cirurgiao-do-Futuro/imagens/isolamento.jpg" alt="Caso 2">
+                <p>O robô hospitalar foi equipado com uma tela, uma câmera e alto-falantes, permitindo uma comunicação bidirecional entre 
+                o paciente e a equipe médica. O robô era controlado remotamente por um membro da equipe através de uma estação de controle. 
+                O membro da equipe, usando a interface do robô, podia ver e ouvir o paciente, enquanto o paciente podia ver e ouvir o membro 
+                da equipe na tela do robô</p>
+                <p>O uso do robô hospitalar facilitou a interação entre a equipe médica e o paciente em isolamento, permitindo que o paciente 
+                se sentisse mais conectado e cuidado, apesar das restrições físicas. Além disso, o robô ofereceu uma maneira eficiente de 
+                monitorar remotamente a saúde do paciente e fornecer suporte contínuo durante sua estadia no hospital.</p>
+                <p>Esse relato ilustra como o uso de robôs hospitalares pode ser uma solução valiosa para enfrentar desafios de interação e 
+                assistência em situações de isolamento, fornecendo suporte emocional, informações atualizadas e monitoramento remoto, 
+                melhorando a experiência e o bem-estar dos pacientes.</p>
+            </div>
+        </section>
+
+        <section id="columns">
+            <div class="case">
+                <h3>Caso 3: Diagnóstico por imagem.</h3>
+                <p> Os robôs hospitalares equipados com inteligência artificial podem analisar imagens médicas, como radiografias, tomografias 
+                    e ressonâncias magnéticas, para auxiliar no diagnóstico. A IA pode identificar padrões e características específicas nas 
+                    imagens que podem indicar a presença de doenças ou anomalias, fornecendo assim um diagnóstico mais preciso e rápido.</p>
+                <img src="/Cirurgiao-do-Futuro/Imagens/tomografia.jpg" alt="Caso 3">
+                <p> O uso da inteligência artificial (IA) em robôs hospitalares para diagnóstico por imagem tem demonstrado resultados promissores. 
+                    Aqui estão mais informações sobre como essa tecnologia funciona:</p>
+                <p> Assistência ao radiologista: Os robôs hospitalares com IA podem atuar como assistentes aos radiologistas, oferecendo uma segunda 
+                    opinião ou destacando áreas de interesse nas imagens médicas. Essa colaboração aumenta a precisão do diagnóstico e ajuda a reduzir 
+                    o tempo necessário para interpretar as imagens.</p>
+                <p> Diagnóstico diferencial: A IA pode ajudar a diferenciar entre condições semelhantes que podem ter apresentações clínicas sobrepostas. 
+                    Ao analisar as características específicas nas imagens médicas, a IA pode fornecer insights valiosos para ajudar os médicos a fazer 
+                    um diagnóstico mais preciso.</p>
+                <p> É importante destacar que a IA em diagnóstico por imagem não substitui a expertise médica. Em vez disso, ela age como uma ferramenta 
+                    de suporte, fornecendo informações adicionais aos médicos para auxiliá-los em suas decisões clínicas.
+                    No geral, o uso de robôs hospitalares com inteligência artificial para análise de imagens médicas tem o potencial de aprimorar a 
+                    eficiência e a precisão do diagnóstico, permitindo um tratamento mais oportuno e eficaz para os pacientes.</p>
+            </div>
+        </section>
+    </body>
+    
+    <footer id="minxblack">
+        <section class="footer-content">
+            <section class="contact-info">
+                <h3>Contato</h3>
+                <p>Email: contatos@cirurgiaofuturo.com</p>
+                <p>Localidade: São Paulo - Jardins, Brasil</p>
+                <p>Telefone: +55 (11) 3945-7654 </p>
+            </section>
+            <section class="description">
+                <p>O cirurgião do futuro é um profissional médico 
+                altamente capacitado e equipado com tecnologias avançadas 
+                que auxiliam e aprimoram suas habilidades durante os procedimentos cirúrgicos.</p>
+            </section>
+        </section>
+        <section class="container">
+            <h3>Nos envie histórias sobre robô hospitalar e suas curiosidades:</h3>
+            <form id="contact-form">
+            <section class="form-row">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="Email" required>
+            </section>
+            <section class="form-row">
+                <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+            </section>
+            <section class="form-row">
+                <button type="submit">Enviar</button>
+            </section>
+            </form>
+        </section>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Cirurgião do Futuro. Todos os direitos reservados.</p>
+            </div>
+    </footer>
+</html>
